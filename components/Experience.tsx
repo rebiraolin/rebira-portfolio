@@ -6,43 +6,48 @@ import { useRef } from "react";
 /* ─── Experience data ────────────────────────────────────────────── */
 const experiences = [
     {
-        company: "Freelance / Independent Projects",
-        role: "Full-Stack Software Engineer",
-        duration: "2023 – Present",
-        location: "Addis Ababa, Ethiopia",
-        stack: ["Python", "Django", "Flask", "React", "Flutter", "Scikit-learn"],
+        company: "GDG On Campus AASTU",
+        role: "Django Mentor",
+        duration: "Nov 2025 – Present",
+        location: "Addis Ababa, Ethiopia (Hybrid)",
+        stack: ["Python", "Django", "Django REST Framework", "PostgreSQL"],
         bullets: [
-            "Designed and built multiple full-stack applications, integrating Python backends with React and Flutter frontends.",
-            "Developed AI/ML components including emotion classifiers using TF-IDF + Logistic Regression and grade prediction pipelines using Random Forest regression.",
-            "Implemented REST API backends with JWT authentication, PostgreSQL/SQLite databases, and CORS-aware configurations for cross-platform compatibility.",
-            "Built Django Admin customizations with consolidated user activity inlines and order management for an academic e-commerce application.",
-            "Authored clean, maintainable code with emphasis on test coverage, proper error handling, and readable architecture.",
+            "Mentored 40+ students on backend architecture and complex database modules, achieving a 90% completion rate.",
+            "Reduced average student debugging time by 30% via standardised teaching protocols for CRUD and DRF patterns.",
+            "Supervised 15+ weekly code reviews, auditing and resolving over 100 logical errors across various student projects.",
         ],
+        highlight: true,
     },
     {
-        company: "Academic & Research Projects",
+        company: "Freelance / Independent Projects",
+        role: "Full-Stack Software Engineer",
+        duration: "2024 – Present",
+        location: "Addis Ababa, Ethiopia",
+        stack: ["Python", "React", "Flutter", "Scikit-learn", "AI/ML"],
+        bullets: [
+            "Designed and built multiple full-stack applications, integrating Python/Node.js backends with React and Flutter frontends.",
+            "Developed AI/ML components including emotion classifiers (TF-IDF + Logistic Regression), grade prediction pipelines (Random Forest regression), and other applied ML solutions.",
+            "Implemented REST API backends with JWT authentication, PostgreSQL/SQLite databases, and CORS-aware configurations for cross-platform compatibility.",
+            "Built admin dashboards and customisations for multi-user management and order workflows.",
+            "Authored clean, maintainable, and testable code with proper error handling and readable architecture.",
+        ],
+        skillsLine: "Skills: Python, React, Flutter, Scikit-learn, AI/ML",
+        highlight: false,
+    },
+    {
+        company: "Self-Directed Learning & Free Resources",
         role: "AI/ML Engineer",
-        duration: "2022 – 2023",
+        duration: "2023 – Present",
         location: "Addis Ababa, Ethiopia",
         stack: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "Matplotlib"],
         bullets: [
-            "Trained and evaluated machine learning models on structured datasets, focusing on feature engineering and model interpretability.",
-            "Produced visualization outputs including predicted vs. actual comparisons and feature importance charts using Matplotlib and Seaborn.",
-            "Developed NLP pipelines for text classification tasks, from data preprocessing through model evaluation and reporting.",
-            "Collaborated on integrated engineering team projects combining hardware and software components, bridging gap between embedded systems and web interfaces.",
+            "Trained and evaluated machine learning models on structured and unstructured datasets, focusing on feature engineering, model interpretability, and practical deployment.",
+            "Developed NLP pipelines for text classification and analysis, from data preprocessing through model evaluation and reporting.",
+            "Generated visualisations such as predicted vs. actual comparisons and feature importance charts using Matplotlib and Seaborn.",
+            "Applied AI/ML solutions across personal and freelance projects to integrate intelligence into full-stack systems.",
         ],
-    },
-    {
-        company: "Self-Directed Learning & Open Source",
-        role: "Backend Engineer in Training",
-        duration: "2021 – 2022",
-        location: "Addis Ababa, Ethiopia",
-        stack: ["Python", "Django", "Git", "PostgreSQL", "Linux"],
-        bullets: [
-            "Mastered core web development fundamentals: HTTP, REST principles, authentication flows, and database design.",
-            "Built progressively complex Django projects, from simple CRUD apps to multi-tenant platforms with role-based access control.",
-            "Established strong software engineering habits: version control discipline, code review, structured problem decomposition.",
-        ],
+        skillsLine: "Skills: Python, TensorFlow, Scikit-learn, Pandas, Matplotlib",
+        highlight: false,
     },
 ];
 
@@ -62,13 +67,25 @@ function ExperienceItem({
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative pl-6 border-l border-blue-500/20 pb-10 last:pb-0"
         >
-            {/* Timeline dot */}
-            <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500/40 border border-blue-500 ring-4 ring-[#0a0c10]" />
+            {/* Timeline dot — highlighted for featured role */}
+            <div
+                className={`absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full border ring-4 ring-[#0a0c10] ${exp.highlight
+                    ? "bg-blue-500 border-blue-400"
+                    : "bg-blue-500/40 border-blue-500"
+                    }`}
+            />
 
             {/* Header */}
             <div className="mb-3">
-                <h3 className="text-[#e2e8f0] font-semibold text-lg">{exp.role}</h3>
-                <div className="flex flex-wrap items-center gap-3 mt-1">
+                <div className="flex flex-wrap items-center gap-2 mb-0.5">
+                    <h3 className="text-[#e2e8f0] font-semibold text-lg">{exp.role}</h3>
+                    {exp.highlight && (
+                        <span className="text-xs px-2 py-0.5 rounded-full border border-blue-500/40 text-blue-400 bg-blue-500/8">
+                            Featured
+                        </span>
+                    )}
+                </div>
+                <div className="flex flex-wrap items-center gap-3 mt-0.5">
                     <span className="text-blue-400 text-sm font-medium">{exp.company}</span>
                     <span className="text-[#64748b] text-xs">•</span>
                     <span className="text-[#64748b] text-xs">{exp.duration}</span>
@@ -86,6 +103,13 @@ function ExperienceItem({
                     </li>
                 ))}
             </ul>
+
+            {/* Skills line */}
+            {exp.skillsLine && (
+                <p className="text-blue-400 font-mono text-xs mb-4">
+                    {exp.skillsLine}
+                </p>
+            )}
 
             {/* Stack tags */}
             <div className="flex flex-wrap gap-2">
@@ -134,10 +158,10 @@ export default function Experience() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-[#e2e8f0]">
-                            My Journey
+                            Experience
                         </h2>
                         <p className="text-[#64748b] text-sm mt-2">
-                            Where I&apos;ve been and what I&apos;ve built along the way.
+                            Where I&apos;ve worked and what I&apos;ve built along the way.
                         </p>
                     </motion.div>
                 </div>
@@ -145,7 +169,7 @@ export default function Experience() {
                 {/* Timeline */}
                 <div className="md:ml-[calc(200px+4rem)]">
                     {experiences.map((exp, i) => (
-                        <ExperienceItem key={exp.company} exp={exp} index={i} />
+                        <ExperienceItem key={`${exp.company}-${exp.role}`} exp={exp} index={i} />
                     ))}
                 </div>
             </div>

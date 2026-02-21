@@ -29,7 +29,7 @@ function useTypewriter(text: string, speed = 40) {
 /* ─── Hero Section ───────────────────────────────────────────────── */
 export default function Hero() {
     const headline =
-        "Software engineer building AI-powered systems that solve real problems.";
+        "Software engineer building AI-powered systems that solve real-world problems.";
     const { displayed, done } = useTypewriter(headline, 35);
 
     return (
@@ -71,9 +71,9 @@ export default function Hero() {
                     transition={{ delay: 2.5, duration: 0.6 }}
                     className="text-[#64748b] text-base md:text-lg max-w-2xl leading-relaxed mb-10"
                 >
-                    Backend-focused engineer with experience in Python, Django, and
-                    applied machine learning. I turn complex requirements into clean,
-                    maintainable systems.
+                    Full-stack engineer with experience designing and developing scalable
+                    applications across web, mobile, and backend platforms. I integrate AI
+                    and ML where it adds value to create intelligent, maintainable solutions.
                 </motion.p>
 
                 {/* CTA buttons */}

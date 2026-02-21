@@ -16,7 +16,7 @@ export default function Footer() {
                 {/* Social Links */}
                 <div className="flex items-center gap-6">
                     <a
-                        href="https://github.com/rebiraoli"
+                        href="https://github.com/rebiraolin"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
@@ -25,7 +25,7 @@ export default function Footer() {
                         <FiGithub size={20} />
                     </a>
                     <a
-                        href="https://linkedin.com/in/rebiraoli"
+                        href="https://www.linkedin.com/in/rebira-oli/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -34,7 +34,7 @@ export default function Footer() {
                         <FiLinkedin size={20} />
                     </a>
                     <a
-                        href="mailto:rebira.oli@example.com"
+                        href="mailto:rebiranegassa24@gmail.com"
                         aria-label="Email"
                         className="text-[#64748b] hover:text-blue-400 transition-colors duration-200"
                     >

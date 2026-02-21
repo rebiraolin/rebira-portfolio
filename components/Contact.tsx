@@ -183,13 +183,13 @@ export default function Contact() {
                         </p>
 
                         <a
-                            href="mailto:rebira.oli@example.com"
+                            href="mailto:rebiranegassa24@gmail.com"
                             className="flex items-center gap-3 text-sm text-[#94a3b8] hover:text-blue-400 transition-colors group"
                         >
                             <span className="p-2.5 bg-[#131720] border border-blue-500/15 rounded-lg group-hover:border-blue-500/40 transition-colors">
                                 <FiMail size={16} />
                             </span>
-                            <span>rebira.oli@example.com</span>
+                            <span>rebiranegassa24@gmail.com</span>
                         </a>
 
                         <a
@@ -205,7 +205,7 @@ export default function Contact() {
                         </a>
 
                         <a
-                            href="https://linkedin.com/in/rebiraoli"
+                            href="https://www.linkedin.com/in/rebira-oli/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 text-sm text-[#94a3b8] hover:text-blue-400 transition-colors group"
@@ -213,7 +213,7 @@ export default function Contact() {
                             <span className="p-2.5 bg-[#131720] border border-blue-500/15 rounded-lg group-hover:border-blue-500/40 transition-colors">
                                 <FiLinkedin size={16} />
                             </span>
-                            <span>linkedin.com/in/rebiraoli</span>
+                            <span>linkedin.com/in/rebira-oli</span>
                         </a>
 
                         {/* Response time note */}

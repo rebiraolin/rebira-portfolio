@@ -6,15 +6,45 @@ import { useRef } from "react";
 /* ─── Skills data ────────────────────────────────────────────────── */
 const skillGroups = [
     {
-        category: "Backend",
-        icon: "⚙️",
+        category: "Languages & Databases",
+        icon: "💾",
         skills: [
             "Python",
+            "JavaScript",
+            "TypeScript",
+            "C++",
+            "Java",
+            "SQL (PostgreSQL, MySQL)",
+            "NoSQL (MongoDB)",
+        ],
+    },
+    {
+        category: "Frameworks & Runtimes",
+        icon: "🏗️",
+        skills: [
             "Django",
+            "Django REST Framework",
+            "FastAPI",
             "Flask",
-            "REST APIs",
-            "PostgreSQL",
-            "SQLite",
+            "Node.js",
+            "Express.js",
+            "React",
+            "Next.js",
+            "Spring Boot",
+            "TensorFlow",
+        ],
+    },
+    {
+        category: "Technical Concepts",
+        icon: "⚙️",
+        skills: [
+            "REST API Development",
+            "CRUD",
+            "MVC Architecture",
+            "Database Design",
+            "Microservices",
+            "Clean Architecture",
+            "Git",
             "JWT Auth",
         ],
     },
@@ -30,10 +60,12 @@ const skillGroups = [
             "Random Forest",
             "Pandas",
             "NumPy",
+            "Matplotlib",
+            "Seaborn",
         ],
     },
     {
-        category: "Frontend",
+        category: "Frontend & Mobile",
         icon: "🎨",
         skills: [
             "React",
@@ -42,7 +74,7 @@ const skillGroups = [
             "Tailwind CSS",
             "Flutter",
             "Dart",
-            "HTML/CSS",
+            "HTML / CSS",
         ],
     },
     {
@@ -53,8 +85,8 @@ const skillGroups = [
             "GitHub",
             "Docker",
             "Vercel",
-            "VS Code",
             "Postman",
+            "VS Code",
             "Linux",
         ],
     },
@@ -105,12 +137,12 @@ export default function Skills() {
                             Technical Stack
                         </h2>
                         <p className="text-[#64748b] text-sm mt-2">
-                            Tools and technologies I use to build production-ready systems.
+                            Tools, languages, and frameworks I use to build production-ready systems.
                         </p>
                     </motion.div>
                 </div>
 
-                {/* Skill groups */}
+                {/* Skill groups — 2-column grid */}
                 <div className="md:ml-[calc(200px+4rem)] grid sm:grid-cols-2 gap-6">
                     {skillGroups.map((group, i) => (
                         <motion.div
@@ -118,7 +150,7 @@ export default function Skills() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-60px" }}
-                            transition={{ duration: 0.4, delay: i * 0.1 }}
+                            transition={{ duration: 0.4, delay: i * 0.08 }}
                             className="gradient-border rounded-xl p-5"
                         >
                             {/* Category header */}

@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 /* ─── About Section ──────────────────────────────────────────────── */
@@ -49,45 +48,44 @@ export default function About() {
 
                     <div className="space-y-4 text-[#94a3b8] leading-relaxed text-sm md:text-base">
                         <p>
-                            I&apos;m Rebira Oli Negassa, a software engineer based in Addis
-                            Ababa, Ethiopia, with a passion for building systems at the
-                            intersection of backend engineering and applied artificial
-                            intelligence. My work spans the full software lifecycle — from
-                            designing scalable APIs to training and deploying machine learning
-                            models.
+                            I&apos;m Rebira Oli Negassa, a software engineer based in Addis Ababa,
+                            Ethiopia, passionate about building systems that combine robust software
+                            engineering with applied artificial intelligence and machine learning.
+                            My work spans the full software lifecycle — from designing scalable web
+                            and mobile applications to training and deploying intelligent models.
                         </p>
                         <p>
-                            My technical foundation is in Python and Django, where I&apos;ve built
-                            production-grade REST APIs, implemented authentication flows, and
-                            managed relational databases. I&apos;m equally comfortable wiring up
-                            frontend UIs in React when the project demands it, which lets me
-                            reason about systems end-to-end rather than in isolation.
+                            I&apos;m comfortable working across the full stack, designing APIs,
+                            integrating frontend interfaces, and ensuring systems are maintainable,
+                            scalable, and performant. I integrate AI and ML into projects where it
+                            adds real value, whether that&apos;s automating tasks, analyzing data, or
+                            providing intelligent features to end users.
                         </p>
                         <p>
-                            On the AI/ML side, I work with scikit-learn, TensorFlow, and
-                            natural language processing tools to build models that do useful
-                            things: classify text, surface insights, and surface structure in
-                            messy data. I believe good ML engineering starts with clean data
-                            and honest evaluation — not hype.
+                            On the AI/ML side, I work with modern machine learning tools to build
+                            models that solve practical problems: classifying data, extracting
+                            insights, and uncovering patterns in complex datasets. I believe good ML
+                            engineering begins with clean data, thoughtful evaluation, and a focus on
+                            utility rather than hype.
                         </p>
                         <p>
-                            I approach problems like an engineer first: understand the
-                            requirements clearly, design before coding, and prioritize
-                            correctness and maintainability over cleverness. I write code that
-                            I and others can read, extend, and debug six months from now.
+                            I approach problems like an engineer first: clarify requirements, plan
+                            before building, and prioritize correctness, maintainability, and
+                            readability. My goal is to create systems that are not just functional,
+                            but understandable and extensible for the long term.
                         </p>
                         <p>
-                            Outside of code, I think deeply about how technology can create
-                            real value in emerging markets — starting with my own context in
-                            East Africa. I care about building systems that are reliable,
-                            accessible, and meaningful to the people who actually use them.
+                            Outside of code, I care about creating meaningful technology solutions in
+                            emerging markets, starting with East Africa. I strive to build systems
+                            that are reliable, accessible, and genuinely useful to the people who
+                            rely on them.
                         </p>
                     </div>
 
                     {/* Quick stats */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
                         {[
-                            { label: "Focus", value: "Backend + AI/ML" },
+                            { label: "Focus", value: "Full-Stack Software Engineering + AI/ML" },
                             { label: "Location", value: "Addis Ababa, ET" },
                             { label: "Available", value: "Open to roles" },
                         ].map((stat) => (

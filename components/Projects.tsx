@@ -20,31 +20,41 @@ const projects: Project[] = [
     {
         title: "AI Mood Companion",
         description:
-            "A mental health companion app that classifies emotions from text and returns therapeutic, supportive responses.",
+            "A privacy-focused app to track and analyze emotions through text input.",
         longDescription:
-            "Built a full-stack mental health app combining a Flutter mobile frontend with a Python/Flask backend. Developed a TF-IDF + Logistic Regression emotion classifier, integrated mood history tracking with local SQLite storage, and resolved cross-origin issues for multi-platform compatibility.",
-        stack: ["Python", "Flask", "Scikit-learn", "Flutter", "Dart", "SQLite"],
+            "Full-stack mobile app with a Flutter/Dart frontend and a FastAPI Python backend. Integrates a scikit-learn emotion classifier to analyze user-entered text and surface mood insights, with local storage via shared_preferences for privacy-first data handling.",
+        stack: ["Flutter", "Dart", "FastAPI", "Python", "Scikit-learn", "shared_preferences"],
         github: "https://github.com/rebiraolin/ai-mood-companion",
         status: "In Progress",
     },
     {
-        title: "Student Performance Predictor",
+        title: "Gemstone Platform",
         description:
-            "Machine learning pipeline that predicts student final grades using Random Forest regression with feature importance visualization.",
+            "Full-stack web app for an eco-friendly gemstone polishing machine project.",
         longDescription:
-            "End-to-end ML project with data preprocessing, feature engineering, and two Random Forest models for grade prediction. Includes side-by-side predicted vs. actual plots and feature importance bar charts saved as PNGs, with beginner-friendly explanations for stakeholders.",
-        stack: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
-        github: "https://github.com/rebiraolin",
+            "Built a Django REST Framework backend and a React + Vite frontend for an integrated engineering team project. Features include user authentication, machine sales listings, polishing service requests, order confirmation emails, and a customized Django Admin panel.",
+        stack: ["Django REST Framework", "Python", "React", "Vite"],
+        github: "https://github.com/rebiraolin/gempol-platform",
         status: "Complete",
     },
     {
-        title: "Gemstone Polishing Platform",
+        title: "Social Media API",
         description:
-            "Full-stack e-commerce web app for an energy-efficient gemstone polishing machine, built as an academic engineering project.",
+            "Django-based social media platform with API endpoints and HTML frontend.",
         longDescription:
-            "Built a Django REST backend and React (Vite) frontend for an IETP academic project. Implemented user authentication, machine sales listings, polishing service requests, order confirmation emails, and a Django Admin panel with consolidated user activity inlines.",
-        stack: ["Django", "Python", "React", "Vite", "PostgreSQL", "REST API"],
-        github: "https://github.com/rebiraolin",
+            "A full-featured social platform backend built with Django REST Framework, exposing API endpoints for posts, follows, and feeds. Paired with a lightweight HTML/CSS frontend for direct browser interaction without a separate JS framework.",
+        stack: ["Django REST Framework", "Python", "HTML", "CSS"],
+        github: "https://github.com/rebiraolin/social_media_api",
+        status: "Complete",
+    },
+    {
+        title: "Guade Study Buddy",
+        description:
+            "Node.js backend API connecting students for study sessions, real-time chat & group management.",
+        longDescription:
+            "A real-time study collaboration platform backend built with Node.js and Express. Features Socket.IO-powered live chat, MongoDB for persistent storage of sessions and groups, and JWT-based authentication for secure student access.",
+        stack: ["Node.js", "Express", "MongoDB", "Socket.IO", "JWT"],
+        github: "https://github.com/rebiraolin/Guade_study-buddy_node",
         status: "Complete",
     },
 ];
@@ -68,8 +78,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                         </h3>
                         <span
                             className={`text-xs px-2 py-0.5 rounded-full border ${project.status === "Complete"
-                                    ? "border-green-500/30 text-green-400 bg-green-500/5"
-                                    : "border-yellow-500/30 text-yellow-400 bg-yellow-500/5"
+                                ? "border-green-500/30 text-green-400 bg-green-500/5"
+                                : "border-yellow-500/30 text-yellow-400 bg-yellow-500/5"
                                 }`}
                         >
                             {project.status}
