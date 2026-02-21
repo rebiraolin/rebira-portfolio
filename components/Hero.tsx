@@ -45,11 +45,21 @@ export default function Hero() {
             />
 
             <div className="max-w-4xl w-full relative z-10">
+                {/* Intro Heading */}
+                <motion.h2
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="text-xl sm:text-2xl font-bold text-[#e2e8f0] mb-4"
+                >
+                    Hello, I’m Rebira Oli
+                </motion.h2>
+
                 {/* Location badge */}
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
                     className="flex items-center gap-2 text-[#64748b] text-sm mb-6"
                 >
                     <FiMapPin className="text-blue-400" size={14} />

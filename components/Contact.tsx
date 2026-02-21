@@ -22,14 +22,27 @@ export default function Contact() {
         e.preventDefault();
         setStatus("sending");
 
-        // TODO: Replace with EmailJS or your preferred email service
-        // Example: await emailjs.send(serviceId, templateId, form, publicKey)
-        // For now, simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 1200));
+        try {
+            const subject = encodeURIComponent(`Portfolio Message from ${form.name}`);
+            const body = encodeURIComponent(
+                `Name: ${form.name}\n` +
+                `Email: ${form.email}\n\n` +
+                `Message:\n${form.message}`
+            );
 
-        // Placeholder: always succeeds for demo purposes
-        setStatus("sent");
-        setForm({ name: "", email: "", message: "" });
+            // Construct mailto link
+            const mailtoLink = `mailto:rebiranegassa24@gmail.com?subject=${subject}&body=${body}`;
+
+            // Trigger email client
+            window.location.href = mailtoLink;
+
+            // Update UI state
+            setStatus("sent");
+            setForm({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("Mailto error:", error);
+            setStatus("error");
+        }
     };
 
     return (
