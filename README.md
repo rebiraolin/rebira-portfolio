@@ -66,4 +66,4 @@ This is a personal portfolio repository. While direct contributions are not acce
 This project is open-source under the [MIT License](LICENSE).
 
 ---
-Developed with Rebira Oli Negassa
+Developed by Rebira Oli Negassa
